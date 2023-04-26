@@ -8,6 +8,7 @@ export default function CategoriesPage() {
       <Typography as="h2">All Categories Page</Typography>
       {categories.map((category, i) => (
         <ImageCTA
+          key={category}
           left={i % 2 === 0}
           ctaBtnLabel="Learn More"
           heading={`${category}`}

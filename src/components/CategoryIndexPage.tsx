@@ -17,7 +17,11 @@ export const CategoryIndexPage = ({ data }: CategoryIndexPageProps) => {
       <Typography as="h1">{`${category} Category Page`}</Typography>
       <p>Category: {category}</p>
       {products.map((product, i) => (
-        <ImageCTA heading={`${category} Product ${i + 1}`} left={i % 2 === 0} />
+        <ImageCTA
+          key={product}
+          heading={`${category} Product ${i + 1}`}
+          left={i % 2 === 0}
+        />
       ))}
     </div>
   );

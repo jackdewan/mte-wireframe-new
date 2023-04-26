@@ -33,6 +33,7 @@ export const FAQ = () => {
       <Disclosure>
         {faq.map((q, i) => (
           <Disclosure.Panel
+            key={i}
             title={`${q.title} ${i + 1}`}
             className="p-4 border text-xl"
           >

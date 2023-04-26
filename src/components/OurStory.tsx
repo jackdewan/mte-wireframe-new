@@ -10,7 +10,7 @@ export const OurStory = () => {
         <Typography as="h1">Our Story</Typography>
       </div>
       {stories.map((story) => (
-        <section>
+        <section key={story}>
           <div className="flex justify-center items-center bg-gray-300 aspect-video w-full">
             <PlaceholderImg />
           </div>

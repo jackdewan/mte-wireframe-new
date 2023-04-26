@@ -17,7 +17,10 @@ export const CardContainerBlog = () => {
         </div>
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {articles.map((article) => (
-            <article className="p-4 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
+            <article
+              key={article}
+              className="p-4 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700"
+            >
               <div className="aspect-video">
                 <PlaceholderImg />
               </div>
