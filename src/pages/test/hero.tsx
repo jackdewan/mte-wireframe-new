@@ -4,7 +4,7 @@ export default function HeroPage() {
       <div className="flex flex-col-reverse items-center">
         <div className="space-y-8">
           <h2 className="text-5xl font-extrabold uppercase text-center">
-            The Headline Goes Here
+            Cannabis In Living Color
           </h2>
           <p>
             Lorem ipsum dolor sit amet consectetur. Viverra scelerisque sit

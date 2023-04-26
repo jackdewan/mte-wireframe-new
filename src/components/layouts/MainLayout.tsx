@@ -13,7 +13,7 @@ export const MainLayout = ({ children }: MainLayoutProps) => {
   return (
     <>
       <HeaderCenter />
-      <div className="pb-80">{children}</div>
+      <div className="min-h-screen py-16 pt-14 lg:pt-20">{children}</div>
       <FooterNewsletter />
     </>
   );

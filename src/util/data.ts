@@ -40,17 +40,17 @@ export const features = [
 
 export const featuredProducts = [
   {
-    title: "Product 1",
+    title: "Featured Product",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   },
   {
-    title: "Product 2",
+    title: "Event Article",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   },
   {
-    title: "Product 3",
+    title: "Education Article",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   },

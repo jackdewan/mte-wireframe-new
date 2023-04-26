@@ -21,20 +21,25 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="">
-        <ImageCTA heading="This is a Hero Heading" />
+        <ImageCTA heading="Cannabis In Living Color" ctaBtnLabel="Learn More" />
         <Section title="Features and Benefits">
           <Features data={features} />
         </Section>
-        <Section title="Featured Products" fullWidth>
+        <Section
+          title="Coming Soon / What's Happening Now / Happenings"
+          fullWidth
+        >
           <CardContainer data={featuredProducts} />
         </Section>
-        <ImageCTA heading="Featured Product" />
-        <CTAHeading title="Education / Learn CTA Section" />
+        <ImageCTA heading="Featured Product" ctaBtnLabel="Learn More" />
+        <ImageCTA
+          heading="Another Featured Product or Category"
+          left
+          ctaBtnLabel="Learn More"
+        />
+        <CTAHeading title="Your Field Guide to Cannabis In New Mexico" />
         <CTANewsletter />
         <CTAHeading title="Our Story" />
-        <Section title="Events" fullWidth>
-          <CardContainer data={events} />
-        </Section>
       </main>
     </>
   );

@@ -6,8 +6,8 @@ export const CTAHeading = ({ title }: CTAHeadingProps) => {
   return (
     <section className="bg-white py-16">
       <div className="py-16 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
-        <div className="mx-auto max-w-screen-sm text-center">
-          <h2 className="mb-8 text-4xl tracking-tight font-extrabold leading-tight text-gray-900">
+        <div className="mx-auto max-w-screen-md text-center">
+          <h2 className="mb-8 text-4xl tracking-tight font-extrabold leading-tight text-gray-900 max-w-md mx-auto">
             {title}
           </h2>
           <p className="mb-10 font-light text-gray-500 md:text-lg">

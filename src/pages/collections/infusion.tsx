@@ -1,7 +1,7 @@
 import { CategoryIndexPage } from "@/components/CategoryIndexPage";
 
 const data = {
-  category: "flower",
+  category: "infusion",
 };
 
 export default function VapePage() {

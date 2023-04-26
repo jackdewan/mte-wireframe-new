@@ -62,12 +62,8 @@ export const Config = {
           path: "/collections/concentrate",
         },
         {
-          displayName: "Flower",
-          path: "/collections/flower",
-        },
-        {
-          displayName: "All Products",
-          path: "/collections/products",
+          displayName: "Infusion",
+          path: "/collections/infusion",
         },
         {
           displayName: "All Categories",
@@ -157,3 +153,11 @@ export const Config = {
     },
   ],
 };
+
+export const categories = [
+  "Vape",
+  "Concentrate",
+  "Edible",
+  "Infusion",
+  "Gummies",
+];

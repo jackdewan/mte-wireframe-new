@@ -34,7 +34,7 @@ export const HeaderCenter = ({
   return (
     <header className="w-full">
       <div
-        className={`bg-white text-gray-500 w-full z-20 transition-all border border-b-gray-700`}
+        className={`bg-white text-gray-500 w-full z-20 fixed top-0 left-0 transition-all border border-b-gray-700`}
       >
         <div className="container">
           <div className="flex items-center justify-between h-14 lg:h-20">
@@ -86,7 +86,10 @@ export const HeaderCenter = ({
               </nav>
             </div>
 
-            <div className={`absolute left-1/2 -ml-10`}>
+            <div
+              className={`absolute left-1/2 -ml-10`}
+              onClick={() => setIsMenuOpen(false)}
+            >
               <Logo title={Config.site.title} />
             </div>
             <div className="flex flex-1 justify-end space-x-5">

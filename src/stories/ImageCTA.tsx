@@ -1,11 +1,13 @@
 import { useEffect } from "react";
 import { Button } from "./Button";
 import { PlaceholderImg } from "@/components/Placeholder";
+import { Typography } from "@/components/Typography";
 
 interface ImageCTAProps {
   left?: boolean;
   scrollAnimate?: boolean;
   heading?: string;
+  ctaBtnLabel?: string;
 }
 
 interface ImageProps {
@@ -15,6 +17,7 @@ interface ImageProps {
 interface TextProps {
   scrollAnimate?: boolean;
   heading?: string;
+  ctaBtnLabel?: string;
 }
 
 export const Image = ({ scrollAnimate }: ImageProps) => {
@@ -30,28 +33,39 @@ export const Image = ({ scrollAnimate }: ImageProps) => {
   );
 };
 
-export const Text = ({ scrollAnimate, heading }: TextProps) => {
+export const Text = ({ scrollAnimate, heading, ctaBtnLabel }: TextProps) => {
   return (
     <div className={`space-y-6`}>
       <div>
-        <h2 className={`text-5xl sm:text-6xl font-extrabold`}>
+        <Typography
+          as="h2"
+          subheading="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        >
           {heading ? heading : "Lorem ipsum dolor sit amet"}
-        </h2>
+        </Typography>
       </div>
-      <div>
+      {/* <div>
         <p className={`font-light md:text-lg dark:text-gray-400 font-serif`}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </p>
-      </div>
-      <div className="items-center sm:flex">
-        <Button label="Learn More" primary />
-      </div>
+      </div> */}
+      {ctaBtnLabel ? (
+        <div className="items-center sm:flex">
+          <Button label={ctaBtnLabel} primary />
+        </div>
+      ) : null}
     </div>
   );
 };
 
-export const ImageCTA = ({ left, scrollAnimate, heading }: ImageCTAProps) => {
+export const ImageCTA = ({
+  left,
+  scrollAnimate,
+  heading,
+  ctaBtnLabel,
+}: ImageCTAProps) => {
   return (
     <section
       className="dark:bg-gray-900 container pt-5 lg:pt-20 pb-10 lg:pb-20"
@@ -68,13 +82,21 @@ export const ImageCTA = ({ left, scrollAnimate, heading }: ImageCTAProps) => {
               <Image scrollAnimate={scrollAnimate} />
             </div>
             <div className="lg:col-start-8 lg:col-span-5 w-full">
-              <Text scrollAnimate={scrollAnimate} />
+              <Text
+                scrollAnimate={scrollAnimate}
+                heading={heading}
+                ctaBtnLabel={ctaBtnLabel}
+              />
             </div>
           </>
         ) : (
           <>
             <div className="lg:col-span-5">
-              <Text scrollAnimate={scrollAnimate} heading={heading} />
+              <Text
+                scrollAnimate={scrollAnimate}
+                heading={heading}
+                ctaBtnLabel={ctaBtnLabel}
+              />
             </div>
             <div className="lg:col-start-7 lg:col-span-6 xl:col-start-9 xl:col-span-4 w-full">
               <Image scrollAnimate={scrollAnimate} />

@@ -4,9 +4,7 @@ import { InputField } from "./InputField";
 export const NewsletterFooter = () => {
   return (
     <div className="space-y-4 lg:space-y-6 max-w-md">
-      <h3 className="text-3xl xl:text-4xl font-neutra2">
-        Subscribe to Our Newsletter
-      </h3>
+      <h3 className="text-3xl xl:text-4xl">Subscribe to Our Newsletter</h3>
       <div>
         <InputField
           label="Newsletter"

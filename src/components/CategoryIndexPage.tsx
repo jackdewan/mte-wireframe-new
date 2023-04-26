@@ -1,4 +1,6 @@
+import { ImageCTA } from "@/stories/ImageCTA";
 import Link from "next/link";
+import { Typography } from "./Typography";
 
 interface CategoryIndexPageProps {
   data: {
@@ -6,23 +8,17 @@ interface CategoryIndexPageProps {
   };
 }
 
-const products = [1, 2, 3];
+const products = [1, 2, 3, 4];
 
 export const CategoryIndexPage = ({ data }: CategoryIndexPageProps) => {
   const { category } = data;
   return (
-    <div className="container">
-      <h2>Category Index Page</h2>
+    <div className="container py-16">
+      <Typography as="h1">{`${category} Category Page`}</Typography>
       <p>Category: {category}</p>
-      <ul className="list-disc ml-5">
-        {products.map((product) => (
-          <li key={product}>
-            <Link href={`/collections/${category}/product-${product}`}>
-              Product {product}
-            </Link>
-          </li>
-        ))}
-      </ul>
+      {products.map((product, i) => (
+        <ImageCTA heading={`${category} Product ${i + 1}`} left={i % 2 === 0} />
+      ))}
     </div>
   );
 };
