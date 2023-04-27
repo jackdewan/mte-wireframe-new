@@ -19,7 +19,11 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="">
-        <ImageCTA heading="Cannabis In Living Color" ctaBtnLabel="Learn More" />
+        <ImageCTA
+          heading="Cannabis In Living Color"
+          ctaBtnLabel="Learn More"
+          subheading="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam."
+        />
         <Section title="Features and Benefits">
           <Features data={features} />
         </Section>

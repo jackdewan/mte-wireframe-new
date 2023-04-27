@@ -8,7 +8,7 @@ import {
 } from "@heroicons/react/24/outline";
 import { MobileMenu } from "./MobileMenu";
 import { Config } from "../util/config";
-import { Logo } from "../stories/Logo";
+import { Logo } from "./Logo";
 import { containerCenter } from "../util/utilityStyles";
 import { Icon } from "../stories/Icon";
 import Link from "next/link";

@@ -1,5 +1,5 @@
 import { Config } from "../util/config";
-import { Logo } from "../stories/Logo";
+import { Logo } from "./Logo";
 
 export const Footer = () => {
   return (

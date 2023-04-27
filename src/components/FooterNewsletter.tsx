@@ -1,6 +1,6 @@
 import { NewsletterFooter } from "../components/NewsletterFooter";
 import { NavigationFooter } from "./NavigationFooter";
-import { Logo } from "../stories/Logo";
+import { Logo } from "./Logo";
 
 export const FooterNewsletter = () => {
   return (

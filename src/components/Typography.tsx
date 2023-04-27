@@ -26,7 +26,7 @@ export const Typography = ({ as, subheading, children }: TypographyProps) => {
         >
           {children}
         </h2>
-        {subheading ? <p>{subheading}</p> : null}
+        {subheading && <p>{subheading}</p>}
       </div>
     );
   }

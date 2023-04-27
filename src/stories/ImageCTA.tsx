@@ -6,6 +6,7 @@ interface ImageCTAProps {
   left?: boolean;
   scrollAnimate?: boolean;
   heading?: string;
+  subheading?: string;
   ctaBtnLabel?: string;
 }
 
@@ -16,6 +17,7 @@ interface ImageProps {
 interface TextProps {
   scrollAnimate?: boolean;
   heading?: string;
+  subheading?: string;
   ctaBtnLabel?: string;
 }
 
@@ -32,15 +34,16 @@ export const Image = ({ scrollAnimate }: ImageProps) => {
   );
 };
 
-export const Text = ({ scrollAnimate, heading, ctaBtnLabel }: TextProps) => {
+export const Text = ({
+  scrollAnimate,
+  heading,
+  subheading,
+  ctaBtnLabel,
+}: TextProps) => {
   return (
     <div className={`space-y-6`}>
       <div>
-        <Typography
-          as="h2"
-          subheading="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua."
-        >
+        <Typography as="h2" subheading={subheading}>
           {heading ? heading : "Lorem ipsum dolor sit amet"}
         </Typography>
       </div>
@@ -63,6 +66,7 @@ export const ImageCTA = ({
   left,
   scrollAnimate,
   heading,
+  subheading,
   ctaBtnLabel,
 }: ImageCTAProps) => {
   return (
@@ -84,6 +88,7 @@ export const ImageCTA = ({
               <Text
                 scrollAnimate={scrollAnimate}
                 heading={heading}
+                subheading={subheading}
                 ctaBtnLabel={ctaBtnLabel}
               />
             </div>
@@ -95,6 +100,7 @@ export const ImageCTA = ({
                 scrollAnimate={scrollAnimate}
                 heading={heading}
                 ctaBtnLabel={ctaBtnLabel}
+                subheading={subheading}
               />
             </div>
             <div className="lg:col-start-7 lg:col-span-6 xl:col-start-9 xl:col-span-4 w-full">
