@@ -1,4 +1,3 @@
-import { IconProps } from "@/util/types";
 import React, { useMemo } from "react";
 
 interface MyIconProps {

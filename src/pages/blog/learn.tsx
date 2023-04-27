@@ -1,10 +1,10 @@
-import { CardContainerLearn } from "@/components/CardContainerLearn";
+import { CardContainerPage } from "../../components/CardContainerPage";
+import { articles } from "../../util/data";
 
 export default function LearnHomePage() {
   return (
     <div className="container">
-      <h2>Learn Home Page</h2>
-      <CardContainerLearn />
+      <CardContainerPage title="Learn Home Page" data={articles} meta />
     </div>
   );
 }

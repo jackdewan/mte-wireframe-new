@@ -1,4 +1,4 @@
-import Disclosure from "@/stories/Disclosure";
+import Disclosure from "../stories/Disclosure";
 
 const faq = [
   {

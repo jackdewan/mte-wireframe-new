@@ -1,6 +1,4 @@
-import { Config } from "@/util/config";
 import { useScrollAnimate } from "../../util/useScrollAnimate";
-import { Footer } from "../Footer";
 import { HeaderCenter } from "../HeaderCenter";
 import { FooterNewsletter } from "../FooterNewsletter";
 

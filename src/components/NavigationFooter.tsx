@@ -1,4 +1,4 @@
-import { Config } from "@/util/config";
+import { Config } from "../util/config";
 import Link from "next/link";
 
 export const NavigationFooter = () => {

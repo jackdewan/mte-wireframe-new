@@ -1,4 +1,4 @@
-import { Button } from "@/stories/Button";
+import { Button } from "../stories/Button";
 import { InputField } from "./InputField";
 
 export const NewsletterFooter = () => {

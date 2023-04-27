@@ -1,12 +1,11 @@
-import { CardContainerBlog } from "@/components/CardContainerBlog";
-import Link from "next/link";
+import { CardContainerPage } from "../../components/CardContainerPage";
 
-const articles = [1, 2, 3];
+import { articles } from "../../util/data";
 
 export default function BlogHomePage() {
   return (
     <div className="container">
-      <CardContainerBlog />
+      <CardContainerPage data={articles} title="Our Blog" meta />
     </div>
   );
 }

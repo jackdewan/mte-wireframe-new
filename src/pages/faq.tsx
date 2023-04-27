@@ -1,5 +1,5 @@
-import { FAQ } from "@/components/FAQ";
-import { Typography } from "@/components/Typography";
+import { FAQ } from "../components/FAQ";
+import { Typography } from "../components/Typography";
 
 export default function FAQPage() {
   return (

@@ -1,5 +1,5 @@
-import { BoltIcon } from "@/stories/assets/BoltIcon";
-import { Icon } from "@/stories/Icon";
+import { BoltIcon } from "../stories/assets/BoltIcon";
+import { Icon } from "../stories/Icon";
 import { FeaturesProps } from "../util/data";
 import { FeatureItem } from "./FeatureItem";
 

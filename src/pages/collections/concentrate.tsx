@@ -1,4 +1,4 @@
-import { CategoryIndexPage } from "@/components/CategoryIndexPage";
+import { CategoryIndexPage } from "../../components/CategoryIndexPage";
 
 const data = {
   category: "concentrate",

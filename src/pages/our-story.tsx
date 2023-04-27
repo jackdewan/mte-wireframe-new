@@ -1,4 +1,4 @@
-import { OurStory } from "@/components/OurStory";
+import { OurStory } from "../components/OurStory";
 
 export default function OurStoryPage() {
   return (

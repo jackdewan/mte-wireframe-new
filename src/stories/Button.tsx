@@ -24,7 +24,7 @@ const getSizeClasses = (size: string) => {
 const getModeClasses = (isPrimary: boolean) =>
   isPrimary
     ? "text-white bg-gray-500 hover:bg-gray-600 hover:border-gray-600 dark:bg-pink-700 dark:border-pink-700"
-    : "text-slate-700 bg-transparent border-slate-700 dark:text-white dark:border-white";
+    : "text-slate-700 bg-transparent border-slate-700 hover:bg-slate-700 hover:text-white dark:text-white dark:border-white";
 
 const BASE_BUTTON_CLASSES = `cursor-pointer rounded rounded-md border-2 border-gray-500 font-bold leading-none inline-block`;
 

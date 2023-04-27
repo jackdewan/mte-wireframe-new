@@ -5,6 +5,13 @@ export interface IconProps {
   className?: string;
 }
 
+export interface ArticleType {
+  title: string;
+  type: string;
+  description: string;
+  buttonLabel?: string;
+}
+
 export type HeroIconType = React.ForwardRefExoticComponent<
   React.SVGProps<SVGSVGElement>
 >;

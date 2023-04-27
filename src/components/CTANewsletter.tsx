@@ -1,4 +1,4 @@
-import { Button } from "@/stories/Button";
+import { Button } from "../stories/Button";
 
 export const CTANewsletter = () => {
   return (

@@ -1,4 +1,4 @@
-import { Button } from "@/stories/Button";
+import { Button } from "../stories/Button";
 import { PlaceholderImg } from "./Placeholder";
 
 interface CardProps {

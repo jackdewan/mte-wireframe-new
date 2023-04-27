@@ -4,12 +4,10 @@ import { Config } from "../util/config";
 import Head from "next/head";
 
 import { features, featuredProducts, events } from "../util/data";
-import { WCard } from "@/components/WCard";
-import { Card } from "@/components/Card";
-import { CardContainer } from "@/components/CardContainer";
-import { Section } from "@/components/Section";
-import { CTANewsletter } from "@/components/CTANewsletter";
-import { CTAHeading } from "@/components/CTAHeading";
+import { CardContainer } from "../components/CardContainer";
+import { Section } from "../components/Section";
+import { CTANewsletter } from "../components/CTANewsletter";
+import { CTAHeading } from "../components/CTAHeading";
 
 export default function Home() {
   return (

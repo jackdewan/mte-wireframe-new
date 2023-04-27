@@ -1,6 +1,6 @@
-import { Typography } from "@/components/Typography";
-import { ImageCTA } from "@/stories/ImageCTA";
-import { categories } from "@/util/config";
+import { Typography } from "../../components/Typography";
+import { ImageCTA } from "../../stories/ImageCTA";
+import { categories } from "../../util/config";
 
 export default function CategoriesPage() {
   return (

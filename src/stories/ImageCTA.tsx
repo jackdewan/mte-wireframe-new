@@ -1,7 +1,6 @@
-import { useEffect } from "react";
 import { Button } from "./Button";
-import { PlaceholderImg } from "@/components/Placeholder";
-import { Typography } from "@/components/Typography";
+import { PlaceholderImg } from "../components/Placeholder";
+import { Typography } from "../components/Typography";
 
 interface ImageCTAProps {
   left?: boolean;
