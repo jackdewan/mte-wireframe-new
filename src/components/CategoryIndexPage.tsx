@@ -1,14 +1,13 @@
-import { ImageCTA } from "../stories/ImageCTA";
+import { Switchback } from "../stories/Switchback";
 import Link from "next/link";
 import { Typography } from "./Typography";
+import { products } from "../util/data";
 
 interface CategoryIndexPageProps {
   data: {
     category: string;
   };
 }
-
-const products = [1, 2, 3, 4];
 
 export const CategoryIndexPage = ({ data }: CategoryIndexPageProps) => {
   const { category } = data;
@@ -23,10 +22,12 @@ export const CategoryIndexPage = ({ data }: CategoryIndexPageProps) => {
       </div>
 
       {products.map((product, i) => (
-        <ImageCTA
-          key={product}
-          heading={`${category} Product ${i + 1}`}
-          left={i % 2 === 0}
+        <Switchback
+          key={product.title}
+          title={product.title}
+          subtitle={product.description}
+          titleSize={"md"}
+          left={i % 2 !== 0}
         />
       ))}
     </div>

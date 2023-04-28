@@ -2,33 +2,30 @@ import { Button } from "./Button";
 import { PlaceholderImg } from "../components/Placeholder";
 import { Typography } from "../components/Typography";
 
-interface ImageCTAProps {
+export interface SwitchbackProps extends SwitchbackTextProps {
   left?: boolean;
-  scrollAnimate?: boolean;
-  heading?: string;
-  subheading?: string;
-  ctaBtnLabel?: string;
 }
 
-interface ImageProps {
+interface SwitchbackImageProps {
   scrollAnimate?: boolean;
 }
 
-interface TextProps {
+export interface SwitchbackTextProps {
   scrollAnimate?: boolean;
-  heading?: string;
-  subheading?: string;
-  ctaBtnLabel?: string;
+  title?: string;
+  titleSize?: "sm" | "md" | "lg";
+  subtitle?: string;
+  btnLabel?: string;
 }
 
-export const Image = ({ scrollAnimate }: ImageProps) => {
+export const Image = ({ scrollAnimate }: SwitchbackImageProps) => {
   return (
     // <img
     //   className={`grayscale w-full object-cover mb-6 sm:mb-12 aspect-[4/3] lg:aspect-[3/4]`}
     //   src="https://images.unsplash.com/photo-1517025423291-770fb99ae547?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80"
     //   alt="mobile app"
     // />
-    <div className="bg-gray-200 h-[30vh] lg:h-[50vh] mb-6">
+    <div className="bg-gray-200 aspect-video lg:aspect-square mb-6">
       <PlaceholderImg />
     </div>
   );
@@ -36,16 +33,20 @@ export const Image = ({ scrollAnimate }: ImageProps) => {
 
 export const Text = ({
   scrollAnimate,
-  heading,
-  subheading,
-  ctaBtnLabel,
-}: TextProps) => {
+  title,
+  titleSize,
+  subtitle,
+  btnLabel,
+}: SwitchbackTextProps) => {
   return (
-    <div className={`space-y-6`}>
-      <div>
-        <Typography as="h2" subheading={subheading}>
-          {heading ? heading : "Lorem ipsum dolor sit amet"}
+    <div className={`max-w-2xl`}>
+      <div className="mb-6">
+        <Typography as="h2" titleSize={titleSize} subtitle={subtitle}>
+          {title ? title : "Lorem ipsum dolor sit amet"}
         </Typography>
+      </div>
+      <div className="mb-10">
+        <Typography>{subtitle}</Typography>
       </div>
       {/* <div>
         <p className={`font-light md:text-lg dark:text-gray-400 font-serif`}>
@@ -53,22 +54,23 @@ export const Text = ({
           eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </p>
       </div> */}
-      {ctaBtnLabel ? (
+      {btnLabel ? (
         <div className="items-center sm:flex">
-          <Button label={ctaBtnLabel} primary />
+          <Button label={btnLabel} primary />
         </div>
       ) : null}
     </div>
   );
 };
 
-export const ImageCTA = ({
+export const Switchback = ({
   left,
   scrollAnimate,
-  heading,
-  subheading,
-  ctaBtnLabel,
-}: ImageCTAProps) => {
+  title,
+  titleSize = "md",
+  subtitle,
+  btnLabel,
+}: SwitchbackProps) => {
   return (
     <section
       className="dark:bg-gray-900 container pt-5 lg:pt-20 pb-10 lg:pb-20"
@@ -87,20 +89,21 @@ export const ImageCTA = ({
             <div className="lg:col-start-8 lg:col-span-5 w-full">
               <Text
                 scrollAnimate={scrollAnimate}
-                heading={heading}
-                subheading={subheading}
-                ctaBtnLabel={ctaBtnLabel}
+                title={title}
+                subtitle={subtitle}
+                btnLabel={btnLabel}
               />
             </div>
           </>
         ) : (
           <>
-            <div className="lg:col-span-5">
+            <div className="lg:col-span-6">
               <Text
                 scrollAnimate={scrollAnimate}
-                heading={heading}
-                ctaBtnLabel={ctaBtnLabel}
-                subheading={subheading}
+                title={title}
+                titleSize={titleSize}
+                subtitle={subtitle}
+                btnLabel={btnLabel}
               />
             </div>
             <div className="lg:col-start-7 lg:col-span-6 xl:col-start-9 xl:col-span-4 w-full">

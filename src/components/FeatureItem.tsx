@@ -1,4 +1,9 @@
-import { FeatureItemProps } from "../util/data";
+import { HeroIconType } from "../util/types";
+
+export interface FeatureItemProps {
+  title: string;
+  Icon: HeroIconType | React.FunctionComponent;
+}
 
 export const FeatureItem = ({ data }: { data: FeatureItemProps }) => {
   const { title, Icon } = data;

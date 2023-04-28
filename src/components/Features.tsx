@@ -1,7 +1,8 @@
-import { BoltIcon } from "../stories/assets/BoltIcon";
-import { Icon } from "../stories/Icon";
-import { FeaturesProps } from "../util/data";
-import { FeatureItem } from "./FeatureItem";
+import { FeatureItem, FeatureItemProps } from "./FeatureItem";
+
+export interface FeaturesProps {
+  data: FeatureItemProps[];
+}
 
 export const Features = ({ data }: FeaturesProps) => {
   return (

@@ -1,9 +1,10 @@
 import { Features } from "../components/Features";
-import { ImageCTA } from "../stories/ImageCTA";
+import { Switchback } from "../stories/Switchback";
 import { Config } from "../util/config";
+import { hero } from "../util/data";
 import Head from "next/head";
 
-import { features, featuredProducts, events } from "../util/data";
+import { features, happenings, homeSwitchbacks } from "../util/data";
 import { CardContainer } from "../components/CardContainer";
 import { Section } from "../components/Section";
 import { CTANewsletter } from "../components/CTANewsletter";
@@ -19,10 +20,10 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="">
-        <ImageCTA
-          heading="Cannabis In Living Color"
-          ctaBtnLabel="Learn More"
-          subheading="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam."
+        <Switchback
+          title={hero.title}
+          subtitle={hero.subtitle}
+          btnLabel={hero.btnLabel}
         />
         <Section title="Features and Benefits">
           <Features data={features} />
@@ -31,14 +32,17 @@ export default function Home() {
           title="Coming Soon / What's Happening Now / Happenings"
           fullWidth
         >
-          <CardContainer data={featuredProducts} />
+          <CardContainer data={happenings} />
         </Section>
-        <ImageCTA heading="Featured Product" ctaBtnLabel="Learn More" />
-        <ImageCTA
-          heading="Another Featured Product or Category"
-          left
-          ctaBtnLabel="Learn More"
-        />
+        {homeSwitchbacks.map((switchback, i) => (
+          <Switchback
+            key={i}
+            title={switchback.title}
+            subtitle={switchback.subtitle}
+            btnLabel={switchback.btnLabel}
+            left={i % 2 !== 0}
+          />
+        ))}
         <CTAHeading title="Your Field Guide to Cannabis In New Mexico" />
         <CTANewsletter />
         <CTAHeading title="Our Story" />

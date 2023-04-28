@@ -10,7 +10,7 @@ export const NavigationFooter = () => {
           <ul className="space-y-2">
             {link.subItems.map((item) => (
               <li key={item.displayName}>
-                <Link href="#" className="">
+                <Link href={`${item.path}`} className="">
                   {item.displayName}
                 </Link>
               </li>

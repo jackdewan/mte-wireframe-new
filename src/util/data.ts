@@ -1,15 +1,49 @@
 import { BoltIcon } from "../stories/assets/BoltIcon";
-import { BoltSlashIcon } from "@heroicons/react/24/outline";
-import { HeroIconType } from "./types";
 
-export interface FeaturesProps {
-  data: FeatureItemProps[];
-}
-
-export interface FeatureItemProps {
+export const categories: {
   title: string;
-  Icon: HeroIconType | React.FunctionComponent;
-}
+  description: string;
+  btnLabel: string;
+}[] = [
+  {
+    title: "Vape",
+    description:
+      "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti.",
+    btnLabel: "Learn More",
+  },
+  {
+    title: "Concentrate",
+    description:
+      "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
+    btnLabel: "Learn More",
+  },
+  {
+    title: "Edible",
+    description:
+      "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti.",
+    btnLabel: "Learn More",
+  },
+  {
+    title: "Infusion",
+    description:
+      "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
+    btnLabel: "Learn More",
+  },
+
+  {
+    title: "Gummies",
+    description:
+      "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
+    btnLabel: "Learn More",
+  },
+];
+
+export const hero = {
+  title: "Cannabis in Living Color",
+  subtitle:
+    "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.",
+  btnLabel: "Learn More",
+};
 
 export const features = [
   {
@@ -38,7 +72,7 @@ export const features = [
   },
 ];
 
-export const featuredProducts = [
+export const happenings = [
   {
     title: "Featured Product",
     type: "product",
@@ -59,6 +93,28 @@ export const featuredProducts = [
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     buttonLabel: "Learn More",
+  },
+];
+
+export const homeSwitchbacks: {
+  title: string;
+  subtitle: string;
+  btnLabel: string;
+  left: boolean;
+}[] = [
+  {
+    title: "Featured Product",
+    subtitle:
+      "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti.",
+    btnLabel: "Learn More",
+    left: false,
+  },
+  {
+    title: "Another Featured Product or Category",
+    subtitle:
+      "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
+    btnLabel: "Learn More",
+    left: true,
   },
 ];
 
@@ -101,5 +157,41 @@ export const articles = [
     type: "Article",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  },
+];
+
+export const products: {
+  title: string;
+  description: string;
+  btnLabel: string;
+  left: boolean;
+}[] = [
+  {
+    title: "This is a product",
+    description:
+      "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti.",
+    btnLabel: "Learn More",
+    left: false,
+  },
+  {
+    title: "That is a product",
+    description:
+      "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
+    btnLabel: "Learn More",
+    left: true,
+  },
+  {
+    title: "Another Product",
+    description:
+      "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti.",
+    btnLabel: "Learn More",
+    left: false,
+  },
+  {
+    title: "Yet Another Product",
+    description:
+      "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
+    btnLabel: "Learn More",
+    left: true,
   },
 ];

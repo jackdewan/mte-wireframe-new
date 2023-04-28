@@ -153,11 +153,3 @@ export const Config = {
     },
   ],
 };
-
-export const categories = [
-  "Vape",
-  "Concentrate",
-  "Edible",
-  "Infusion",
-  "Gummies",
-];
