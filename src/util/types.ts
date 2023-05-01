@@ -10,6 +10,7 @@ export interface ArticleType {
   type: string;
   description: string;
   buttonLabel?: string;
+  slug: string;
 }
 
 export type HeroIconType = React.ForwardRefExoticComponent<

@@ -1,6 +1,7 @@
 import { ArticleType } from "../util/types";
 import { PlaceholderImg } from "./Placeholder";
 import { Button } from "../stories/Button";
+import Link from "next/link";
 
 interface CardArticleProps {
   data: ArticleType;
@@ -23,7 +24,7 @@ export const CardArticle = ({ data, tag, meta }: CardArticleProps) => {
         </span>
       )}
       <h2 className="my-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-        <a href="#">{data.title}</a>
+        <Link href={`${data.slug}`}>{data.title}</Link>
       </h2>
       <p className="mb-4 font-light text-gray-500 dark:text-gray-400">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod

@@ -16,6 +16,7 @@ export interface SwitchbackTextProps {
   titleSize?: "sm" | "md" | "lg";
   subtitle?: string;
   btnLabel?: string;
+  btnPath?: string;
 }
 
 export const Image = ({ scrollAnimate }: SwitchbackImageProps) => {
@@ -37,6 +38,7 @@ export const Text = ({
   titleSize,
   subtitle,
   btnLabel,
+  btnPath,
 }: SwitchbackTextProps) => {
   return (
     <div className={`max-w-2xl`}>
@@ -56,7 +58,7 @@ export const Text = ({
       </div> */}
       {btnLabel ? (
         <div className="items-center sm:flex">
-          <Button label={btnLabel} primary />
+          <Button label={btnLabel} primary btnPath={btnPath} />
         </div>
       ) : null}
     </div>
@@ -70,6 +72,7 @@ export const Switchback = ({
   titleSize = "md",
   subtitle,
   btnLabel,
+  btnPath,
 }: SwitchbackProps) => {
   return (
     <section
@@ -92,6 +95,7 @@ export const Switchback = ({
                 title={title}
                 subtitle={subtitle}
                 btnLabel={btnLabel}
+                btnPath={btnPath}
               />
             </div>
           </>
@@ -104,6 +108,7 @@ export const Switchback = ({
                 titleSize={titleSize}
                 subtitle={subtitle}
                 btnLabel={btnLabel}
+                btnPath={btnPath}
               />
             </div>
             <div className="lg:col-start-7 lg:col-span-6 xl:col-start-9 xl:col-span-4 w-full">

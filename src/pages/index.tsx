@@ -40,6 +40,7 @@ export default function Home() {
             title={switchback.title}
             subtitle={switchback.subtitle}
             btnLabel={switchback.btnLabel}
+            btnPath={switchback.btnPath}
             left={i % 2 !== 0}
           />
         ))}

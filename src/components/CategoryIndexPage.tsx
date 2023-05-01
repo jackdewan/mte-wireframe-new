@@ -21,15 +21,17 @@ export const CategoryIndexPage = ({ data }: CategoryIndexPageProps) => {
         </Typography>
       </div>
 
-      {products.map((product, i) => (
-        <Switchback
-          key={product.title}
-          title={product.title}
-          subtitle={product.description}
-          titleSize={"md"}
-          left={i % 2 !== 0}
-        />
-      ))}
+      {products
+        .filter((product) => product.category.toLowerCase() === category)
+        .map((product, i) => (
+          <Switchback
+            key={product.title}
+            title={product.title}
+            subtitle={product.description}
+            titleSize={"md"}
+            left={i % 2 !== 0}
+          />
+        ))}
     </div>
   );
 };

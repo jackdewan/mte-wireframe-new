@@ -1,4 +1,6 @@
+import { SwitchbackProps } from "@/stories/Switchback";
 import { BoltIcon } from "../stories/assets/BoltIcon";
+import { ArticleType } from "./types";
 
 export const categories: {
   title: string;
@@ -79,6 +81,7 @@ export const happenings = [
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     buttonLabel: "Learn More",
+    slug: "Featured Product",
   },
   {
     title: "Event Article",
@@ -86,6 +89,7 @@ export const happenings = [
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     buttonLabel: "Learn More",
+    slug: "Event Article",
   },
   {
     title: "Education Article",
@@ -93,28 +97,24 @@ export const happenings = [
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     buttonLabel: "Learn More",
+    slug: "Learn Article",
   },
 ];
 
-export const homeSwitchbacks: {
-  title: string;
-  subtitle: string;
-  btnLabel: string;
-  left: boolean;
-}[] = [
+export const homeSwitchbacks: SwitchbackProps[] = [
   {
     title: "Featured Product",
     subtitle:
       "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti.",
     btnLabel: "Learn More",
-    left: false,
+    btnPath: "/collections/concentrate",
   },
   {
     title: "Another Featured Product or Category",
     subtitle:
       "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
     btnLabel: "Learn More",
-    left: true,
+    btnPath: "/collections/vape",
   },
 ];
 
@@ -124,18 +124,21 @@ export const events = [
     type: "Event",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    slug: "Event",
   },
   {
     title: "Event 2",
     type: "Event",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    slug: "Event",
   },
   {
     title: "Event 3",
     type: "Event",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    slug: "Event",
   },
 ];
 
@@ -145,53 +148,150 @@ export const articles = [
     type: "Article",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    slug: "blog/Article",
   },
   {
     title: "Article 2",
     type: "Article",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    slug: "blog/Article",
   },
   {
     title: "Article 3",
     type: "Article",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    slug: "blog/Article",
+  },
+];
+
+export const learnings: ArticleType[] = [
+  {
+    title: "Learn Article 1",
+    type: "learning",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    slug: "Learn",
+  },
+  {
+    title: "Learn Article 2",
+    type: "learning",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    slug: "Learn",
+  },
+  {
+    title: "Learn Article 3",
+    type: "learning",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    slug: "Learn",
   },
 ];
 
 export const products: {
   title: string;
+  category: "vape" | "concentrate" | "infusion" | "gummies" | "edible";
   description: string;
   btnLabel: string;
-  left: boolean;
 }[] = [
   {
-    title: "This is a product",
+    title: "La Luz",
+    category: "vape",
     description:
       "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti.",
     btnLabel: "Learn More",
-    left: false,
   },
   {
-    title: "That is a product",
+    title: "Live Resin",
+    category: "vape",
     description:
       "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
     btnLabel: "Learn More",
-    left: true,
   },
   {
-    title: "Another Product",
+    title: "Dry Ran",
+    category: "vape",
     description:
       "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti.",
     btnLabel: "Learn More",
-    left: false,
   },
   {
-    title: "Yet Another Product",
+    title: "Diamonds",
+    category: "concentrate",
     description:
       "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
     btnLabel: "Learn More",
-    left: true,
+  },
+  {
+    title: "Live Resin",
+    category: "concentrate",
+    description:
+      "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
+    btnLabel: "Learn More",
+  },
+  {
+    title: "Dry Ran",
+    category: "concentrate",
+    description:
+      "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
+    btnLabel: "Learn More",
+  },
+  {
+    title: "Gummies - Traditional",
+    category: "gummies",
+    description:
+      "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
+    btnLabel: "Learn More",
+  },
+  {
+    title: "Gummies - Sleep",
+    category: "gummies",
+    description:
+      "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
+    btnLabel: "Learn More",
+  },
+  {
+    title: "Gummies - Alive",
+    category: "gummies",
+    description:
+      "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
+    btnLabel: "Learn More",
+  },
+  {
+    title: "Gummies - Balance",
+    category: "gummies",
+    description:
+      "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
+    btnLabel: "Learn More",
+  },
+  {
+    title: "Lollipops",
+    category: "infusion",
+    description:
+      "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
+    btnLabel: "Learn More",
+  },
+  {
+    title: "Tiki Juice",
+    category: "infusion",
+    description:
+      "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
+    btnLabel: "Learn More",
+  },
+  {
+    title: "Salve",
+    category: "infusion",
+    description:
+      "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
+    btnLabel: "Learn More",
+  },
+  {
+    title: "Oasis",
+    category: "infusion",
+    description:
+      "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
+    btnLabel: "Learn More",
   },
 ];

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React, { useMemo } from "react";
 
 interface ButtonProps {
@@ -5,6 +6,7 @@ interface ButtonProps {
   size?: "small" | "medium" | "large";
   label: string;
   fullWidth?: boolean;
+  btnPath?: string;
 }
 
 const getSizeClasses = (size: string) => {
@@ -36,6 +38,7 @@ export const Button = ({
   size = "medium",
   label,
   fullWidth,
+  btnPath,
   ...props
 }: ButtonProps) => {
   const computedClasses = useMemo(() => {
@@ -44,6 +47,19 @@ export const Button = ({
 
     return [modeClass, sizeClass].join(" ");
   }, [primary, size]);
+
+  if (btnPath)
+    return (
+      <Link
+        href={btnPath}
+        className={`${BASE_BUTTON_CLASSES} ${computedClasses} ${
+          fullWidth && "w-full"
+        }`}
+        {...props}
+      >
+        {label}
+      </Link>
+    );
 
   return (
     <button
