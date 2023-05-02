@@ -46,10 +46,6 @@ export const Config = {
       path: "/collections/products",
       subItems: [
         {
-          displayName: "Edible",
-          path: "/collections/edible",
-        },
-        {
           displayName: "Vape",
           path: "/collections/vape",
         },

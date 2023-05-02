@@ -1,6 +1,6 @@
 import { ArticleType } from "../util/types";
 import { Card } from "./Card";
-import { CardArticle } from "./CardArticle";
+import { CardArticle } from "../stories/CardArticle";
 
 interface CardContainerProps {
   data: ArticleType[];

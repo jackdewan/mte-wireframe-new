@@ -4,6 +4,6 @@ const data = {
   category: "infusion",
 };
 
-export default function VapePage() {
+export default function InfusionPage() {
   return <CategoryIndexPage data={data} />;
 }

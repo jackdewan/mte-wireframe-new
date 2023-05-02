@@ -65,7 +65,7 @@ export const Button = ({
     <button
       type="button"
       className={`${BASE_BUTTON_CLASSES} ${computedClasses} ${
-        fullWidth && "w-full"
+        fullWidth && "max-[640px]:w-full"
       }`}
       {...props}
     >

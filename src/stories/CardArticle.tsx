@@ -1,6 +1,6 @@
 import { ArticleType } from "../util/types";
-import { PlaceholderImg } from "./Placeholder";
-import { Button } from "../stories/Button";
+import { PlaceholderImg } from "../components/Placeholder";
+import { Button } from "./Button";
 import Link from "next/link";
 
 interface CardArticleProps {
@@ -9,11 +9,14 @@ interface CardArticleProps {
   meta?: boolean;
 }
 
+const cardDescription =
+  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.";
+
 export const CardArticle = ({ data, tag, meta }: CardArticleProps) => {
   return (
     <article
       key={data.title}
-      className="p-4 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700 space-y-5"
+      className="p-4 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700 space-y-5 max-w-md"
     >
       <div className="aspect-video">
         <PlaceholderImg />
@@ -27,8 +30,7 @@ export const CardArticle = ({ data, tag, meta }: CardArticleProps) => {
         <Link href={`${data.slug}`}>{data.title}</Link>
       </h2>
       <p className="mb-4 font-light text-gray-500 dark:text-gray-400">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua.
+        {data.description}
       </p>
       {meta && (
         <div className="flex items-center space-x-4">

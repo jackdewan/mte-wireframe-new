@@ -1,8 +1,8 @@
 import { NewsletterFooter } from "../components/NewsletterFooter";
-import { NavigationFooter } from "./NavigationFooter";
-import { Logo } from "./Logo";
+import { NavigationFooter } from "../components/NavigationFooter";
+import { Logo } from "../components/Logo";
 
-export const FooterNewsletter = () => {
+export const Footer = () => {
   return (
     <footer className="">
       <div className="pb-12 xl:pb-16 bg-gray-100">

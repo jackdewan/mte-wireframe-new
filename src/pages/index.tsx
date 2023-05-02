@@ -7,8 +7,8 @@ import Head from "next/head";
 import { features, happenings, homeSwitchbacks } from "../util/data";
 import { CardContainer } from "../components/CardContainer";
 import { Section } from "../components/Section";
-import { CTANewsletter } from "../components/CTANewsletter";
-import { CTAHeading } from "../components/CTAHeading";
+import { CTANewsletter } from "../stories/CTANewsletter";
+import { CTAHeading } from "../stories/CTAHeading";
 
 export default function Home() {
   return (

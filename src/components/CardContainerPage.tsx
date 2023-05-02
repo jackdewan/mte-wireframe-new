@@ -1,5 +1,5 @@
 import { ArticleType } from "../util/types";
-import { CardArticle } from "./CardArticle";
+import { CardArticle } from "../stories/CardArticle";
 
 interface CardContainerBlogProps {
   title: string;
