@@ -1,15 +1,25 @@
-import { NewsletterFooter } from "../components/NewsletterFooter";
-import { NavigationFooter } from "../components/NavigationFooter";
-import { Logo } from "../components/Logo";
+import { NewsletterFooter } from "@/components/NewsletterFooter";
+import { MountainLineFooter } from "./assets/MountainLineFooter";
+import { MountainLineFooterSm } from "./assets/MountainLineFooterSm";
+import { LogoCircle } from "../components/LogoCircle";
+import { FooterNavigation } from "../components/FooterNavigation";
 
 export const Footer = () => {
   return (
-    <footer className="">
-      <div className="pb-12 xl:pb-16 bg-gray-100">
+    <footer className="text-white">
+      <div className="text-aqua-800">
+        <div className="hidden sm:block">
+          <MountainLineFooter />
+        </div>
+        <div className="sm:hidden -mb-2">
+          <MountainLineFooterSm />
+        </div>
+      </div>
+      <div className="pb-12 xl:pb-16 bg-aqua-800">
         <div className="container">
           <div className="">
             <div className="mb-8 xl:mb-12">
-              <Logo title="Logo" />
+              <LogoCircle secondary />
             </div>
             <div
               className="lg:flex lg:flex-row-reverse lg:justify-between w-full
@@ -19,7 +29,7 @@ export const Footer = () => {
                 <NewsletterFooter />
               </div>
               <div>
-                <NavigationFooter />
+                <FooterNavigation />
               </div>
             </div>
           </div>
