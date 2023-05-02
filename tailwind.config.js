@@ -12,7 +12,7 @@ module.exports = {
   // Toggle dark-mode based on class or data-mode=”dark”
   darkMode: ["class", '[data-mode="dark"]'],
   theme: {
-    // colors, -- add design token colors
+    colors,
     container: {
       center: true,
       padding: {
