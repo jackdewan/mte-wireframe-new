@@ -1,18 +1,38 @@
 import { Button } from "./Button";
 
-export const CTANewsletter = () => {
+interface CtaNewsletterProps {
+  title?: string;
+  subtitle?: string;
+  buttonLabel?: string;
+  protectionCopy?: string;
+  protectionBtnLabel?: string;
+}
+
+export const CtaNewsletterCopy = {
+  title: "Sign up for our newsletter",
+  subtitle:
+    "Stay up to date with the new product updates and cool stuff happening.",
+  buttonLabel: "Subscribe Now!",
+  protectionCopy: "We care about the protection of your data.",
+  protectionBtnLabel: "Read our Privacy Policy",
+};
+
+export const CTANewsletter = ({
+  title = CtaNewsletterCopy.title,
+  subtitle = CtaNewsletterCopy.subtitle,
+  buttonLabel = CtaNewsletterCopy.buttonLabel,
+  protectionCopy = CtaNewsletterCopy.protectionCopy,
+  protectionBtnLabel = CtaNewsletterCopy.protectionBtnLabel,
+}: CtaNewsletterProps) => {
   return (
     <section className="bg-white dark:bg-gray-600">
       <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
         <div className="gap-16 justify-between items-center p-6 border-2 border-gray-500 lg:flex lg:gap-24 md:p-12">
           <div className="w-full">
             <h2 className="mb-4 text-3xl tracking-tight sm:text-4xl">
-              Sign up for our newsletter
+              {title}
             </h2>
-            <p className="sm:text-xl">
-              Stay up to date with the new product updates and cool stuff
-              happening.
-            </p>
+            <p className="sm:text-xl">{subtitle}</p>
           </div>
           <div className="mt-6 w-full lg:mt-0">
             <form action="#">
@@ -42,13 +62,13 @@ export const CTANewsletter = () => {
                   />
                 </div>
                 <div>
-                  <Button label="Subscribe" fullWidth />
+                  <Button label={buttonLabel} fullWidth />
                 </div>
               </div>
               <div className="text-sm text-left">
-                We care about the protection of your data.{" "}
+                {protectionCopy}{" "}
                 <a href="#" className="font-medium hover:underline">
-                  Read our Privacy Policy
+                  {protectionBtnLabel}
                 </a>
                 .
               </div>
