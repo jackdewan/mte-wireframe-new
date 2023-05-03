@@ -1,6 +1,6 @@
 interface InputFieldProps {
   label: string;
-  id: string;
+  name: string;
   required?: boolean;
   placeholder?: string;
   type?: string;
@@ -10,7 +10,7 @@ interface InputFieldProps {
 
 export const InputField = ({
   label,
-  id,
+  name,
   required,
   placeholder,
   type = "text",
@@ -20,7 +20,7 @@ export const InputField = ({
   return (
     <div>
       <label
-        htmlFor={id}
+        htmlFor={name}
         className={`mb-2 text-sm font-medium ${
           dark ? "text-white" : "text-gray-900"
         } ${hideLabel ? "hidden" : "block"}`}
@@ -29,7 +29,8 @@ export const InputField = ({
       </label>
       <input
         type={type}
-        id={id}
+        id={name}
+        name={name}
         className={`border text-sm rounded-lg block w-full p-2.5
           ${
             dark

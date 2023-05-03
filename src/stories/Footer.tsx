@@ -1,8 +1,9 @@
-import { NewsletterFooter } from "@/components/NewsletterFooter";
+import { NewsletterFooter } from "../components/NewsletterFooter";
 import { MountainLineFooter } from "./assets/MountainLineFooter";
 import { MountainLineFooterSm } from "./assets/MountainLineFooterSm";
 import { LogoCircle } from "../components/LogoCircle";
 import { FooterNavigation } from "../components/FooterNavigation";
+import { LogoCircleSolid } from "./assets/LogoCircleSolid";
 
 export const Footer = () => {
   return (
@@ -18,8 +19,8 @@ export const Footer = () => {
       <div className="pb-12 xl:pb-16 bg-aqua-800">
         <div className="container">
           <div className="">
-            <div className="mb-8 xl:mb-12">
-              <LogoCircle secondary />
+            <div className="mb-8 xl:mb-12 h-24 w-24 text-aqualight">
+              <LogoCircleSolid />
             </div>
             <div
               className="lg:flex lg:flex-row-reverse lg:justify-between w-full

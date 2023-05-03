@@ -1,4 +1,4 @@
-interface CTAHeadingProps {
+interface CtaContentProps {
   title: string;
   body?: string;
   btnLabel?: string;
@@ -7,11 +7,11 @@ interface CTAHeadingProps {
 const bodyCopy =
   "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.";
 
-export const CTAHeading = ({
+export const CtaContent = ({
   title,
   body = bodyCopy,
   btnLabel = "Check it out",
-}: CTAHeadingProps) => {
+}: CtaContentProps) => {
   return (
     <section className="bg-white py-16">
       <div className="py-16 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">

@@ -1,5 +1,5 @@
 import { Button } from "../stories/Button";
-import { InputField } from "./InputField";
+import { InputField } from "../stories/InputField";
 
 export const NewsletterFooter = () => {
   return (
@@ -8,7 +8,7 @@ export const NewsletterFooter = () => {
       <div>
         <InputField
           label="Newsletter"
-          id="newsletter_footer"
+          name="newsletter_footer"
           required
           placeholder="janedoe@example.com"
           hideLabel

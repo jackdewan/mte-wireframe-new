@@ -1,10 +1,12 @@
+import Link from "next/link";
 import { useMemo } from "react";
 
 interface TypographyProps {
-  as?: string;
+  as?: "h1" | "h2" | "h3" | "a" | "p";
   title?: string;
   titleSize?: "sm" | "md" | "lg";
   subtitle?: string;
+  href?: string;
   noPadding?: boolean;
   children?: JSX.Element | string;
 }
@@ -47,6 +49,7 @@ export const Typography = ({
   title,
   titleSize = "md",
   subtitle,
+  href,
   children,
 }: TypographyProps) => {
   const computedClasses = useMemo(() => {
@@ -82,6 +85,16 @@ export const Typography = ({
         {children}
       </h3>
     );
+  }
+
+  if (as === "a") {
+    if (href) {
+      return (
+        <Link className="hover:underline" href={href}>
+          {children}
+        </Link>
+      );
+    }
   }
   return <p>{children}</p>;
 };

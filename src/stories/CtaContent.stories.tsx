@@ -2,15 +2,15 @@ import React from "react";
 
 import { Meta, StoryObj } from "@storybook/react";
 
-import { CTAHeading } from "./CTAHeading";
+import { CtaContent } from "./CtaContent";
 
-const meta: Meta<typeof CTAHeading> = {
-  title: "Components/CTAHeading",
-  component: CTAHeading,
+const meta: Meta<typeof CtaContent> = {
+  title: "Components/CTA Content",
+  component: CtaContent,
 };
 
 export default meta;
-type Story = StoryObj<typeof CTAHeading>;
+type Story = StoryObj<typeof CtaContent>;
 
 export const Primary: Story = {
   args: {

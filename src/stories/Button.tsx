@@ -6,6 +6,7 @@ interface ButtonProps {
   size?: "small" | "medium" | "large";
   label: string;
   fullWidth?: boolean;
+  dark?: boolean;
   btnPath?: string;
 }
 
@@ -23,12 +24,14 @@ const getSizeClasses = (size: string) => {
   }
 };
 
-const getModeClasses = (isPrimary: boolean) =>
-  isPrimary
-    ? "text-white bg-gray-500 hover:bg-gray-600 hover:border-gray-600 dark:bg-pink-700 dark:border-pink-700"
-    : "text-slate-700 bg-transparent border-slate-700 hover:bg-slate-700 hover:text-white dark:text-white dark:border-white";
+const getModeClasses = (isPrimary: boolean, isDark: boolean) =>
+  isDark
+    ? isPrimary
+      ? `bg-aqua-500 hover:bg-aqua-600 border-aqua-500 text-aqua-850`
+      : `bg-pink-600 hover:bg-pink-700 hover: border-pink-600`
+    : "bg-transparent border-aqua-800";
 
-const BASE_BUTTON_CLASSES = `cursor-pointer rounded rounded-md border-2 border-gray-500 font-bold leading-none inline-block`;
+const BASE_BUTTON_CLASSES = `cursor-pointer rounded rounded-md border-2 font-bold leading-none inline-block`;
 
 /**
  * Primary UI component for user interaction
@@ -39,10 +42,11 @@ export const Button = ({
   label,
   fullWidth,
   btnPath,
+  dark = false,
   ...props
 }: ButtonProps) => {
   const computedClasses = useMemo(() => {
-    const modeClass = getModeClasses(primary);
+    const modeClass = getModeClasses(primary, dark);
     const sizeClass = getSizeClasses(size);
 
     return [modeClass, sizeClass].join(" ");
@@ -53,7 +57,7 @@ export const Button = ({
       <Link
         href={btnPath}
         className={`${BASE_BUTTON_CLASSES} ${computedClasses} ${
-          fullWidth && "w-full"
+          fullWidth && "max-[640px]:w-full"
         }`}
         {...props}
       >
