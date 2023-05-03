@@ -4,11 +4,11 @@ import { Config } from "../util/config";
 import { hero } from "../util/data";
 import Head from "next/head";
 
-import { features, happenings, homeSwitchbacks } from "../util/data";
+import { features, articles, homeSwitchbacks } from "../util/data";
 import { CardContainer } from "../components/CardContainer";
 import { Section } from "../components/Section";
 import { CTANewsletter } from "../stories/CTANewsletter";
-import { CTAHeading } from "../stories/CTAHeading";
+import { CtaContent } from "../stories/CtaContent";
 
 export default function Home() {
   return (
@@ -32,7 +32,9 @@ export default function Home() {
           title="Coming Soon / What's Happening Now / Happenings"
           fullWidth
         >
-          <CardContainer data={happenings} />
+          <CardContainer
+            data={articles.filter((article) => article.featured).slice(0, 3)}
+          />
         </Section>
         {homeSwitchbacks.map((switchback, i) => (
           <Switchback
@@ -44,9 +46,9 @@ export default function Home() {
             left={i % 2 !== 0}
           />
         ))}
-        <CTAHeading title="Your Field Guide to Cannabis In New Mexico" />
+        <CtaContent title="Your Field Guide to Cannabis In New Mexico" />
         <CTANewsletter />
-        <CTAHeading title="Our Story" />
+        <CtaContent title="Our Story" />
       </main>
     </>
   );

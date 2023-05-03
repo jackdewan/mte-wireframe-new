@@ -7,9 +7,10 @@ export interface IconProps {
 
 export interface ArticleType {
   title: string;
-  type: string;
+  type: "Article" | "Education" | "Event";
   description: string;
   buttonLabel?: string;
+  featured: boolean;
   slug: string;
 }
 

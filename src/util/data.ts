@@ -74,33 +74,6 @@ export const features = [
   },
 ];
 
-export const happenings = [
-  {
-    title: "Featured Product",
-    type: "product",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    buttonLabel: "Learn More",
-    slug: "Featured Product",
-  },
-  {
-    title: "Event Article",
-    type: "event",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    buttonLabel: "Learn More",
-    slug: "Event Article",
-  },
-  {
-    title: "Education Article",
-    type: "learn",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    buttonLabel: "Learn More",
-    slug: "Learn Article",
-  },
-];
-
 export const homeSwitchbacks: SwitchbackProps[] = [
   {
     title: "Featured Product",
@@ -118,72 +91,75 @@ export const homeSwitchbacks: SwitchbackProps[] = [
   },
 ];
 
-export const events = [
-  {
-    title: "Event 1",
-    type: "Event",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    slug: "Event",
-  },
-  {
-    title: "Event 2",
-    type: "Event",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    slug: "Event",
-  },
-  {
-    title: "Event 3",
-    type: "Event",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    slug: "Event",
-  },
-];
-
-export const articles = [
+export const articles: ArticleType[] = [
   {
     title: "Article 1",
     type: "Article",
+    featured: true,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     slug: "blog/Article",
   },
-  {
-    title: "Article 2",
-    type: "Article",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    slug: "blog/Article",
-  },
-  {
-    title: "Article 3",
-    type: "Article",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    slug: "blog/Article",
-  },
-];
-
-export const learnings: ArticleType[] = [
   {
     title: "Learn Article 1",
-    type: "learning",
+    type: "Education",
+    featured: true,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     slug: "Learn",
   },
   {
+    title: "Event 1",
+    type: "Event",
+    featured: true,
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    slug: "Event",
+  },
+  {
+    title: "Article 2",
+    type: "Article",
+    featured: false,
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    slug: "blog/Article",
+  },
+  {
+    title: "Event 2",
+    type: "Event",
+    featured: false,
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    slug: "Event",
+  },
+  {
+    title: "Article 3",
+    type: "Article",
+    featured: false,
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    slug: "blog/Article",
+  },
+  {
+    title: "Event 3",
+    type: "Event",
+    featured: false,
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    slug: "Event",
+  },
+  {
     title: "Learn Article 2",
-    type: "learning",
+    type: "Education",
+    featured: false,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     slug: "Learn",
   },
   {
     title: "Learn Article 3",
-    type: "learning",
+    type: "Education",
+    featured: false,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     slug: "Learn",

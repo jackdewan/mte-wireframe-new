@@ -1,5 +1,7 @@
 import { CardContainerPage } from "../../components/CardContainerPage";
-import { events } from "../../util/data";
+import { articles } from "../../util/data";
+
+const events = articles.filter((article) => article.type === "Event");
 
 export default function EventsPage() {
   return (

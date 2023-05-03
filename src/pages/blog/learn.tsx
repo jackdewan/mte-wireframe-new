@@ -1,5 +1,7 @@
 import { CardContainerPage } from "../../components/CardContainerPage";
-import { learnings } from "../../util/data";
+import { articles } from "../../util/data";
+
+const learnings = articles.filter((article) => article.type === "Education");
 
 export default function LearnHomePage() {
   return (
