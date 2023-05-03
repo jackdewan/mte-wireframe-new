@@ -17,13 +17,11 @@ type Story = StoryObj<typeof CardArticle>;
 
 export const Simple: Story = {
   args: {
-    data: {
-      title: "Card Title",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      slug: "slug",
-      type: "conentrate",
-    },
+    title: "Card Title",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    slug: "slug",
+    type: "conentrate",
     meta: false,
     tag: false,
   },

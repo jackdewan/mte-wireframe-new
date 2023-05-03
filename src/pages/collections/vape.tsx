@@ -1,9 +1,7 @@
 import { CategoryIndexPage } from "../../components/CategoryIndexPage";
 
-const data = {
-  category: "vape",
-};
+const category = "vape";
 
 export default function VapePage() {
-  return <CategoryIndexPage data={data} />;
+  return <CategoryIndexPage category={category} />;
 }

@@ -4,13 +4,10 @@ import { Typography } from "./Typography";
 import { products } from "../util/data";
 
 interface CategoryIndexPageProps {
-  data: {
-    category: string;
-  };
+  category: string;
 }
 
-export const CategoryIndexPage = ({ data }: CategoryIndexPageProps) => {
-  const { category } = data;
+export const CategoryIndexPage = ({ category }: CategoryIndexPageProps) => {
   return (
     <div className="container py-16">
       <div className="text-center space-y-6 max-w-xl mx-auto">

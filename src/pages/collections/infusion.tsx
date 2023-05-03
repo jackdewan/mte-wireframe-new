@@ -1,9 +1,7 @@
 import { CategoryIndexPage } from "../../components/CategoryIndexPage";
 
-const data = {
-  category: "infusion",
-};
+const category = "infusion";
 
 export default function InfusionPage() {
-  return <CategoryIndexPage data={data} />;
+  return <CategoryIndexPage category={category} />;
 }

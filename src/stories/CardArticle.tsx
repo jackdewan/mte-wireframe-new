@@ -3,8 +3,7 @@ import { PlaceholderImg } from "../components/Placeholder";
 import { Button } from "./Button";
 import Link from "next/link";
 
-interface CardArticleProps {
-  data: ArticleType;
+interface CardArticleProps extends ArticleType {
   tag?: boolean;
   meta?: boolean;
 }
@@ -12,10 +11,18 @@ interface CardArticleProps {
 const cardDescription =
   "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.";
 
-export const CardArticle = ({ data, tag, meta }: CardArticleProps) => {
+export const CardArticle = ({
+  title,
+  type,
+  slug,
+  description,
+  buttonLabel,
+  tag,
+  meta,
+}: CardArticleProps) => {
   return (
     <article
-      key={data.title}
+      key={title}
       className="p-4 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700 space-y-5 max-w-md"
     >
       <div className="aspect-video">
@@ -23,14 +30,14 @@ export const CardArticle = ({ data, tag, meta }: CardArticleProps) => {
       </div>
       {tag && (
         <span className="bg-gray-100 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-purple-200 dark:text-purple-900">
-          {data.type}
+          {type}
         </span>
       )}
       <h2 className="my-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-        <Link href={`${data.slug}`}>{data.title}</Link>
+        <Link href={`${slug}`}>{title}</Link>
       </h2>
       <p className="mb-4 font-light text-gray-500 dark:text-gray-400">
-        {data.description}
+        {description}
       </p>
       {meta && (
         <div className="flex items-center space-x-4">
@@ -45,7 +52,7 @@ export const CardArticle = ({ data, tag, meta }: CardArticleProps) => {
           </div>
         </div>
       )}
-      {data.buttonLabel && <Button label={data.buttonLabel} />}
+      {buttonLabel && <Button label={buttonLabel} />}
     </article>
   );
 };

@@ -28,7 +28,17 @@ export const CardContainerPage = ({
         </div>
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {data.map((article, i) => (
-            <CardArticle key={i} data={article} tag={tag} meta={meta} />
+            <CardArticle
+              key={i}
+              title={article.title}
+              description={article.description}
+              slug={article.slug}
+              type={article.type}
+              buttonLabel={article.buttonLabel}
+              featured={article.featured}
+              tag={tag}
+              meta={meta}
+            />
           ))}
         </div>
       </div>
